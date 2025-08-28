@@ -1,0 +1,17 @@
+footer{
+    font: bold;
+    font-size: 20;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    text-align: center;
+}

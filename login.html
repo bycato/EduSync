@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
-    <form action="main.html" method="post">
-        <label for="username">Nome de usuário:</label> <br>
-        <input type="text" id="nome" placeholder="Insira seu nome de usuário aqui."> <br>
-        <label for="password">Senha:</label> <br>
-        <input tpye="password" id="senha" placeholder="Insira sua senha aqui."> <br>
-        <a href="signup.html">Não tenho cadastro. Cadastrar</a>
-        <input type="submit" id="submit-login" value="submit">
-    </form>
+    <header class="w3-container w3-teal" id="header_login">
+        <h1>Header Exemplo</h1>
+    </header>
+    <div class="container" id="container_login">
+        <form action="main.html" method="post">
+            <label for="username">Nome de usuário:</label> <br>
+            <input type="text" id="nome" placeholder="Insira seu nome de usuário aqui."> <br>
+            <label for="password">Senha:</label> <br>
+            <input tpye="password" id="senha" placeholder="Insira sua senha aqui."> <br>
+            <a href="signup.html">Não tenho cadastro. Cadastrar...</a>
+            <input type="submit" id="submit-login" value="Enviar">
+        </form>
+    </div>
+    <footer class="w3-container w3-teal" id="footer_login">
+        <h1>Footer Exemplo</h1>
+        <p>informações footer</p>
+    </footer>
 </body>
 </html>

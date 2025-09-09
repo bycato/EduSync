@@ -1,0 +1,38 @@
+body{
+    background-color: lightgray;
+}
+
+#submit-login{
+    border-radius: 5%;
+    background-color: lightgreen;
+    border-color:aliceblue;
+    width:70px;
+    height: 45px;
+}
+
+#header_login{
+    border-color: black;
+    width: 50%;
+    height: 20%;
+    background-color: aliceblue;
+    align-content: center;
+    align-self: center; 
+}
+
+#container_login{
+    border-color: black;
+    width: 50%;
+    height: 45%;
+    background-color:gray;
+    align-content: center;
+    align-self: center;
+}
+
+#footer_login{
+    border-color: black;
+    width: 50%;
+    height: 20%;
+    background-color: aliceblue;
+    align-content: center;
+    align-self: center;
+}

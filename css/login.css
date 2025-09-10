@@ -1,38 +1,116 @@
+@font-face{
+    font-family: "ChunkFive";
+    src: url("../fonts/chunkfive.regular.ttf") format("truetype"), url("../fonts/chunkfive.regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     background-color: lightgray;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+#container_pai{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50%;
+    margin-top: 50%;
+    width: 700px;
+    height: 700px;
+    background-color: white;   
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 7%;
 }
 
 #submit-login{
     border-radius: 5%;
-    background-color: lightgreen;
+    background-color: #506EA0;
     border-color:aliceblue;
     width:70px;
     height: 45px;
+    border-radius: 25%;
+    transform: translateX(+325%);
 }
 
 #header_login{
+    position:relative;
     border-color: black;
-    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     height: 20%;
-    background-color: aliceblue;
-    align-content: center;
-    align-self: center; 
+    text-align: center;
+    transform: translateY(-14%);
+    border-radius: 55%;
+}
+
+h1{
+    transform: translateY(+190%);
+    font-family: "ChunkFive";
+    color: #506EA0;
+    font-weight: 600;
+    font-size: 6vh;
+
 }
 
 #container_login{
+    position:relative;
     border-color: black;
-    width: 50%;
-    height: 45%;
-    background-color:gray;
-    align-content: center;
-    align-self: center;
+    border-radius: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 75%;
+    text-align: center;
 }
 
-#footer_login{
-    border-color: black;
-    width: 50%;
-    height: 20%;
-    background-color: aliceblue;
-    align-content: center;
-    align-self: center;
+#form_login{
+    font: bold;
+    font-size: medium;
+    position:relative;
+    text-align: center;
+    transform: translateY(+65%)
+}
+
+#nome{
+    background-color: #506EA0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 70%;
+}
+
+#nome::placeholder{
+    color: white;
+}
+
+#senha{
+    background-color: #506EA0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 70%;
+}
+
+#senha::placeholder{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
 }

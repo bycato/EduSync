@@ -5,112 +5,119 @@
     font-style: normal;
 }
 
-body{
-    background-color: lightgray;
-    text-align: center;
+
+:root {
+    --primary-color: #506EA0;
+    --secondary-color: #f0f4f8;
+    --text-color: #333;
+    --placeholder-color: #a0a0a0;
+    --border-radius: 10px;
+    --input-focus-color: #435b86;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 95vh;
+    align-items: center;
+    min-height: 100vh;
 }
 
-#container_pai{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50%;
-    margin-top: 50%;
-    width: 700px;
-    height: 700px;
-    background-color: white;   
-    border: 3px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 7%;
-}
-
-#submit-login{
-    border-radius: 5%;
-    background-color: #506EA0;
-    border-color:aliceblue;
-    width:70px;
-    height: 45px;
-    border-radius: 25%;
-    transform: translateX(+325%);
-}
-
-#header_login{
-    position:relative;
-    border-color: black;
-    margin-left: auto;
-    margin-right: auto;
+.login-container {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 20%;
-    text-align: center;
-    transform: translateY(-14%);
-    border-radius: 55%;
+    max-width: 400px;
 }
 
-h1{
-    transform: translateY(+190%);
-    font-family: "ChunkFive";
-    color: #506EA0;
+.welcome-text {
+    font-size: 1.8rem;
     font-weight: 600;
-    font-size: 6vh;
-
-}
-
-#container_login{
-    position:relative;
-    border-color: black;
-    border-radius: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 75%;
+    color: var(--primary-color);
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-#form_login{
-    font: bold;
-    font-size: medium;
-    position:relative;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(80, 110, 160, 0.2);
+}
+
+.input-group input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.login-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: var(--input-focus-color);
+}
+
+.links {
     text-align: center;
-    transform: translateY(+65%)
+    margin-top: 1rem;
 }
 
-#nome{
-    background-color: #506EA0;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 70%;
+.signup-link {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-#nome::placeholder{
-    color: white;
+.signup-link:hover {
+    color: var(--input-focus-color);
 }
 
-#senha{
-    background-color: #506EA0;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 70%;
-}
-
-#senha::placeholder{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-label{
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-a{
-    font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 500px) {
+    .login-container {
+        padding: 2rem 1.5rem;
+        box-shadow: none;
+    }
 }

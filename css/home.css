@@ -1,0 +1,203 @@
+@font-face{
+    font-family: "League Spartan";
+    src: url("../fonts/league-spartan.bold.otf") format(opentype), url("../fonts/league-spartan.bold.ttf") format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  background-color: #f3f4f6;
+  color: #111827;
+  line-height: 1.5;
+}
+
+
+header {
+  background: #111827;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header h1 span {
+  color: #3b82f6;
+}
+
+header nav a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #3b82f6;
+}
+
+.hero {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero .card {
+  background: #374151;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.hero .card:hover {
+  transform: scale(1.05);
+}
+
+
+section.news {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.news h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.news .box {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.news .box:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.news img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.news .content {
+  padding: 1.5rem;
+}
+
+.news .content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.news .content a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news .content a:hover {
+  text-decoration: underline;
+}
+
+
+section.extra {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.extra h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.extra .box {
+  background: #dbeafe;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.extra .box:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.extra .box a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1d4ed8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.extra .box a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  background: #111827;
+  color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+footer .links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #3b82f6;
+}
+
+footer p {
+  color: #9ca3af;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+

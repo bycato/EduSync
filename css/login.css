@@ -121,3 +121,10 @@ body {
         box-shadow: none;
     }
 }
+
+.login-button{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+}

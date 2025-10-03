@@ -12,6 +12,7 @@
     --placeholder-color: #a0a0a0;
     --border-radius: 10px;
     --input-focus-color: #435b86;
+    --err-color: #d84242;
 }
 
 * {
@@ -80,6 +81,12 @@ body {
 
 .input-group input::placeholder {
     color: var(--placeholder-color);
+}
+
+input:invalid:not(:placeholder-shown),
+input:focus:invalid:not(:placeholder-shown) {
+    border: 2px solid var(--err-color);
+    box-shadow: 0 0 0 4px rgba(216,66,66,0.06);
 }
 
 .signup-button {

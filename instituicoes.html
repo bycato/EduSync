@@ -3,53 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instituições</title>
+    <title>Instituições - Plataforma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/instituicoes.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
 </head>
 <body>
-    <a href="main.html" class="btn-voltar">Voltar</a>
-    <div class="main-container">
-        <img src="img/logo.png" alt="Logo do site" class="logo">
-        <h1>Instituições de Ensino</h1>
-        <div class="container">
-            <div class="card">
-              <img src="img/instituicao1.jpg" alt="Instituição 1">
-              <div class="card-info">
-              <h2>Faculdade INSTED</h2>
-              <button>Saiba Mais</button>
-              <span class="rating">4.9 ★</span>
-            </div>
-            </div>
+    
+    <header class="header-app">
+        <nav class="navbar-primary">
+            <div class="nav-container">
+                <a href="#" class="logo-new">
+                    <img src="logo-placeholder.png" alt="EduSync Logo" class="logo-img">
+                </a>
+                
+                <div class="nav-links-primary">
+                    <a href="#">Home</a>
+                    <a href="#" class="active">Instituições</a>
+                    <a href="#">Cursos</a>
+                    <a href="#">Vestibulares</a>
+                    <a href="#">Feed</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Notícias</a>
+                </div>
 
-                        <div class="card">
-              <img src="img/instituicao2.jpg" alt="Instituição 2">
-              <div class="card-info">
-              <h2>Faculdade INSTED</h2>
-              <button>Saiba Mais</button>
-              <span class="rating">4.9 ★</span>
+                <div class="nav-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" placeholder="Buscar instituições, cursos..." class="search-input">
+                    </div>
+                    <button class="btn-login">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </div>
             </div>
-            </div>
-
-                        <div class="card">
-              <img src="img/instituicao3.jpg" alt="Instituição 3">
-              <div class="card-info">
-              <h2>Faculdade INSTED</h2>
-              <button>Saiba Mais</button>
-              <span class="rating">4.9 ★</span>
-            </div>
-            </div>
-
-                        <div class="card">
-              <img src="img/instituicao4.jpg" alt="Instituição 4">
-              <div class="card-info">
-              <h2>Faculdade INSTED</h2>
-              <button>Saiba Mais</button>
-              <span class="rating">4.9 ★</span>
-            </div>
-            </div>
-
+        </nav>
+    </header>
+    <main class="content-wrapper">
+        <div class="intro-section">
+            <h1 class="page-title">Instituições</h1>
+            <p class="page-subtitle">
+                Conheça as instituições parceiras e os cursos disponíveis na plataforma.
+                Encontre o caminho ideal para sua próxima qualificação profissional.
+            </p>
         </div>
-    </div>
-</body>
 
+        <div class="institutions-grid">
+            <div class="institution-card">
+                <div class="card-image-placeholder">
+                  <img src="img/insted.jpeg" alt="Insted">
+                </div>
+                <div class="card-content">
+                    <h3 class="course-title">Nome do Curso / Titulo</h3>
+                    <p class="institution-name">Nome da Instituição</p>
+                    <div class="rating">
+                        <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i>
+                        <span class="rating-value">4.0 (150 avaliações)</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="detail-item"><i class="fas fa-clock"></i> 80h</span>
+                        <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">R$ 199,00</span>
+                        <button class="btn-detalhes">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="institution-card">
+                 <div class="card-image-placeholder">
+                  <img src="img/insted.jpeg" alt="Insted">
+                 </div>
+                <div class="card-content">
+                    <h3 class="course-title">Outro Curso</h3>
+                    <p class="institution-name">Universidade X</p>
+                    <div class="rating">
+                        <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="rating-value">3.0 (80 avaliações)</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="detail-item"><i class="fas fa-clock"></i> 60h</span>
+                        <span class="detail-item"><i class="fas fa-user-friends"></i> 30 alunos</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">R$ 120,00</span>
+                        <button class="btn-detalhes">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="institution-card">
+                 <div class="card-image-placeholder">
+                  <img src="img/insted.jpeg" alt="Insted">
+                 </div>
+                <div class="card-content">
+                    <h3 class="course-title">Curso Avançado</h3>
+                    <p class="institution-name">Tech Academy</p>
+                    <div class="rating">
+                        <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i>
+                        <span class="rating-value">5.0 (210 avaliações)</span>
+                    </div>
+                    <div class="details-row">
+                        <span class="detail-item"><i class="fas fa-clock"></i> 120h</span>
+                        <span class="detail-item"><i class="fas fa-user-friends"></i> 90 alunos</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">R$ 499,00</span>
+                        <button class="btn-detalhes">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+             <div class="institution-card"> <div class="card-image-placeholder"><img src="img/insted.jpeg" alt="Insted"></div>
+                <div class="card-content"> <h3 class="course-title">Nome do Curso / Titulo</h3> <p class="institution-name">Nome da Instituição</p> <div class="rating"> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i> <span class="rating-value">4.0 (150 avaliações)</span> </div> <div class="details-row"> <span class="detail-item"><i class="fas fa-clock"></i> 80h</span> <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span> </div> <div class="price-action"> <span class="price">R$ 199,00</span> <button class="btn-detalhes">Detalhes</button> </div> </div> </div>
+             <div class="institution-card"> <div class="card-image-placeholder"><img src="img/insted.jpeg" alt="Insted"></div>
+                <div class="card-content"> <h3 class="course-title">Nome do Curso / Titulo</h3> <p class="institution-name">Nome da Instituição</p> <div class="rating"> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i> <span class="rating-value">4.0 (150 avaliações)</span> </div> <div class="details-row"> <span class="detail-item"><i class="fas fa-clock"></i> 80h</span> <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span> </div> <div class="price-action"> <span class="price">R$ 199,00</span> <button class="btn-detalhes">Detalhes</button> </div> </div> </div>
+             <div class="institution-card"> <div class="card-image-placeholder"><img src="img/insted.jpeg" alt="Insted"></div>
+                <div class="card-content"> <h3 class="course-title">Nome do Curso / Titulo</h3> <p class="institution-name">Nome da Instituição</p> <div class="rating"> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i> <span class="rating-value">4.0 (150 avaliações)</span> </div> <div class="details-row"> <span class="detail-item"><i class="fas fa-clock"></i> 80h</span> <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span> </div> <div class="price-action"> <span class="price">R$ 199,00</span> <button class="btn-detalhes">Detalhes</button> </div> </div> </div>
+             <div class="institution-card"> <div class="card-image-placeholder"><img src="img/insted.jpeg" alt="Insted"></div>
+                <div class="card-content"> <h3 class="course-title">Nome do Curso / Titulo</h3> <p class="institution-name">Nome da Instituição</p> <div class="rating"> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i> <span class="rating-value">4.0 (150 avaliações)</span> </div> <div class="details-row"> <span class="detail-item"><i class="fas fa-clock"></i> 80h</span> <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span> </div> <div class="price-action"> <span class="price">R$ 199,00</span> <button class="btn-detalhes">Detalhes</button> </div> </div> </div>
+             <div class="institution-card"> <div class="card-image-placeholder"><img src="img/insted.jpeg" alt="Insted"></div>
+                <div class="card-content"> <h3 class="course-title">Nome do Curso / Titulo</h3> <p class="institution-name">Nome da Instituição</p> <div class="rating"> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i> <span class="rating-value">4.0 (150 avaliações)</span> </div> <div class="details-row"> <span class="detail-item"><i class="fas fa-clock"></i> 80h</span> <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span> </div> <div class="price-action"> <span class="price">R$ 199,00</span> <button class="btn-detalhes">Detalhes</button> </div> </div> </div>
+             <div class="institution-card"> <div class="card-image-placeholder"><img src="img/insted.jpeg" alt="Insted"></div>
+                <div class="card-content"> <h3 class="course-title">Nome do Curso / Titulo</h3> <p class="institution-name">Nome da Instituição</p> <div class="rating"> <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i><i class="fas fa-star"></i> <span class="rating-value">4.0 (150 avaliações)</span> </div> <div class="details-row"> <span class="detail-item"><i class="fas fa-clock"></i> 80h</span> <span class="detail-item"><i class="fas fa-user-friends"></i> 50 alunos</span> </div> <div class="price-action"> <span class="price">R$ 199,00</span> <button class="btn-detalhes">Detalhes</button> </div> </div> </div>
+            </div>
+    </main>
+
+    <footer class="footer-educsync">
+        <div class="footer-container">
+            <div class="footer-col footer-logo">
+                <div class="logo-placeholder">EduSync</div>
+                <p class="description">
+                    Conectando estudantes às melhores oportunidades educacionais do Brasil.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-title">Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Instituições</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Vestibulares</a></li>
+                    <li><a href="#">Feed</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Notícias</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-title">Recursos</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Comparar Instituições</a></li>
+                    <li><a href="#">Guia de Cursos</a></li>
+                    <li><a href="#">Calendário Acadêmico</a></li>
+                    <li><a href="#">Dicas de Estudo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="col-title">Contato</h4>
+                <p class="contact-info">
+                    <a href="mailto:contato@edusync.com.br">contato@edusync.com.br</a><br>
+                    (67) 9999-9999<br>
+                    Campo Grande, MS
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>© 2024 EduSync. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    </body>
 </html>

@@ -458,3 +458,43 @@ body {
         text-align: center;
     }
 }
+
+/* Modal de escolha de login (compatível com Home/Login) */
+.modal-overlay{
+    position: fixed; inset: 0; z-index: 1000;
+    background: rgba(0,0,0,.45);
+    display: none; align-items: center; justify-content: center;
+    padding: 1rem;
+}
+.modal-overlay[aria-hidden="false"]{ display: flex; }
+.modal-box{
+    width: min(100%, 560px);
+    background: #fff; border: 1px solid var(--border-color);
+    border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,.18);
+    padding: 1.25rem; position: relative;
+}
+.modal-close{
+    position: absolute; top: .5rem; right: .5rem;
+    height: 32px; width: 32px; border-radius: 8px;
+    border: 1px solid var(--border-color); background: #fff; cursor: pointer;
+    font-size: 20px; line-height: 1; color: #333;
+}
+.modal-close:hover{ background: #f7f7f7; }
+.modal-title{ margin: 0 0 .25rem; font-size: 1.25rem; color: #111; }
+.modal-subtitle{ margin: 0 0 1rem; color: var(--secondary-color); }
+.role-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.role-card{
+    display: grid; place-items: center; text-align: center;
+    gap: .25rem; text-decoration: none; color: inherit;
+    border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    background: #fff;
+}
+.role-card:hover{ transform: translateY(-2px); border-color: #cfd6df; box-shadow: 0 10px 20px rgba(0,0,0,.08); }
+.role-emoji{ font-size: 28px; }
+.role-title{ font-weight: 600; color: #111; }
+.role-desc{ font-size: .9rem; color: var(--secondary-color); }
+
+@media (max-width: 560px){
+    .role-grid{ grid-template-columns: 1fr; }
+}

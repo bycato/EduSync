@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Empresa</title>
+    <title>Login - EduSync</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -12,7 +12,15 @@
 <body>
     <div class="login-container">
         <div class="login-box">
-            <h1 class="welcome-text">Seja bem-vindo!</h1>
+            <h1 class="welcome-text" id="login-heading">Seja bem-vindo!</h1>
+            <!-- Seletor de perfil -->
+            <div class="role-switcher" aria-label="Selecionar perfil de login">
+                <label for="role-select">Perfil:</label>
+                <select id="role-select">
+                    <option value="aluno">Aluno</option>
+                    <option value="professor">Professor</option>
+                </select>
+            </div>
             <form action="pageinicial.html" method="post" class="login-form">
                 <div class="input-group">
                     <label for="username">Nome de usuário ou e-mail</label>
@@ -31,5 +39,27 @@
             </form>
         </div>
     </div>
+
+        <!-- Modal: Escolher tipo de cadastro -->
+        <div id="signup-choice" class="modal-overlay" aria-hidden="true">
+            <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="signup-choice-title">
+                <button class="modal-close" type="button" aria-label="Fechar">×</button>
+                <h3 id="signup-choice-title" class="modal-title">Cadastrar como</h3>
+                <p class="modal-subtitle">Escolha o tipo de conta para continuar com o cadastro.</p>
+                <div class="role-grid">
+                    <a class="role-card" href="signup.html?role=aluno">
+                        <div class="role-emoji" aria-hidden="true">🎓</div>
+                        <div class="role-title">Aluno</div>
+                        <div class="role-desc">Crie sua conta de estudante</div>
+                    </a>
+                    <a class="role-card" href="signup.html?role=professor">
+                        <div class="role-emoji" aria-hidden="true">👨‍🏫</div>
+                        <div class="role-title">Professor</div>
+                        <div class="role-desc">Crie sua conta de professor</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <script src="js/login.js" defer></script>
 </body>
 </html>

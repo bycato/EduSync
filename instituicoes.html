@@ -16,17 +16,23 @@
           <img class="brand__logo" src="./img/logon.png" alt="EduSync" />
         </a>
 
+ 
         <nav class="nav" aria-label="Principal">
           <ul class="nav__list">
             <li><a class="nav__link" href="instituicoes.html">Instituições</a></li>
-            <li><a class="nav__link" href="#">Cursos</a></li> <li><a class="nav__link" href="#">Vestibulares</a></li> <li><a class="nav__link" href="#">Eventos</a></li> <li><a class="nav__link" href="#">Notícias</a></li></ul>
+            <li><a class="nav__link" href="#">Cursos</a></li>
+            <li><a class="nav__link" href="#">Vestibulares</a></li>
+            <li><a class="nav__link" href="#">Eventos</a></li>
+            <li><a class="nav__link" href="#">Notícias</a></li>
+          </ul>
+ 
         </nav>
 
         <div class="header__actions">
           <form class="search" role="search" aria-label="Buscar">
             <input class="search__input" type="search" placeholder="Buscar instituições, cursos..." />
           </form>
-          <a class="button button--ghost" href="login.html">Login</a> 
+          <a class="button button--ghost js-login-trigger" href="login.html">Login</a>
         </div>
       </div>
     </header>
@@ -246,6 +252,6 @@
             <p>© 2024 EduSync. Todos os direitos reservados.</p>
         </div>
     </footer>
-    
+    <script src="js/auth-ui.js" defer></script>
     </body>
 </html>

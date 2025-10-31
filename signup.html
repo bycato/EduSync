@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - Empresa</title>
+  <title>Cadastro - EduSync</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -11,8 +11,8 @@
 </head>
 <body>
     <div class="signup-container">
-        <div class="signup-box">
-            <h1 class="welcome-text">Crie sua conta</h1>
+    <div class="signup-box">
+      <h1 class="welcome-text" id="signup-heading">Crie sua conta</h1>
             <form action="main.html" method="post" class="signup-form">
                 <div class="input-group">
                     <label for="username">Nome de usuário</label>
@@ -38,33 +38,6 @@
         </div>
     </div>
 
-    <script>
-      // Validação das senhas
-      document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('.signup-form');
-        const pwd = document.getElementById('password');
-        const pwd2 = document.getElementById('confirm-password');
-
-        function validateMatch() {
-          // Evita marcar como inválido se o campo estiver vazio
-          if (!pwd2.value) {
-            pwd2.setCustomValidity('');
-            return;
-          }
-          pwd2.setCustomValidity(pwd.value !== pwd2.value ? 'As senhas não coincidem' : '');
-        }
-
-        pwd.addEventListener('input', validateMatch);
-        pwd2.addEventListener('input', validateMatch);
-
-        form.addEventListener('submit', function (e) {
-          validateMatch();
-          if (!form.checkValidity()) {
-            e.preventDefault();
-            form.reportValidity();
-          }
-        });
-      });
-    </script>
+    <script src="js/signup.js" defer></script>
 </body>
 </html>

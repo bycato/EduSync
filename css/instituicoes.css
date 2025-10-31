@@ -1,9 +1,68 @@
-@font-face{
-    font-family: "ChunkFive";
-    src: url("../fonts/chunkfive.regular.ttf") format("truetype"), url("../fonts/chunkfive.regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+/* --- ADIÇÃO DE CLASSE DE CONTAINER GERAL --- */
+.container {
+    /* Define a largura máxima para o conteúdo não esticar demais em telas largas */
+    max-width: 1280px; 
+    /* Centraliza o container na tela */
+    margin-left: auto;
+    margin-right: auto;
+    /* Adiciona padding interno para as laterais, evitando que o conteúdo fique colado */
+    padding-left: 20px; 
+    padding-right: 20px;
 }
+
+/* Para telas menores, garanta um padding menor */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+
+/* --- CORREÇÃO DO HEADER --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #FFFFFFF2;
+    border-bottom: 1.11px solid #0000001A;
+    min-height: 65.1042px;
+    /* REMOVEMOS os paddings laterais fixos. O .container dentro cuidará disso. */
+    padding-bottom: 1.11px;
+}
+
+.site-header .container {
+    width: 100%;
+    /* O header__inner agora usa o padding do .container */
+}
+
+/* O restante do seu CSS (variáveis, * , .section, .inst-card, .footer-container, etc.) continua como você enviou, mas com estas correções principais: */
+
+/* HEADER CORREÇÃO: Garante que o conteúdo interno utilize o padding do .container */
+.header__inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* REMOVA ou COMENTE qualquer seção que defina padding-left/right fixo no .site-header */
+/* Exemplo: REMOVA @media (max-width: 1024px){ .site-header{ padding-left: 24px; padding-right: 24px; } } */
+
+/* CORREÇÃO FOOTER */
+.footer-container {
+    /* Alinhe com o novo max-width do .container */
+    max-width: 1280px; 
+    margin: 0 auto;
+    /* REMOVEMOS: padding: 0 20px 3rem; pois o .container externo cuida do padding lateral */
+    padding-bottom: 3rem; /* Mantemos apenas o padding vertical inferior */
+    display: grid;
+    gap: 40px;
+    border-bottom: 1px solid var(--footer-border-color); 
+}
+
+/* O restante do seu CSS (variáveis, * , .section, .inst-card, .newsletter, etc.) segue inalterado abaixo: */
 
 /* --- ESTILOS GLOBAIS E VARIÁVEIS --- */
 :root {
@@ -29,432 +88,510 @@
     box-sizing: border-box;
 }
 
+html, body { height: 100%; }
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: #333;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- HEADER:  --- */
-.header-app {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+/* ... (RESTO DO SEU CSS DE HEADER, SEÇÃO E FOOTER INALTERADO ABAIXO) ... */
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--text);
+  text-decoration: none;
 }
 
-.header-bar-top {
-    background-color: var(--header-top-bg);
-    padding: 0.5rem 1.5rem;
-    color: var(--secondary-color);
-    font-size: 0.9rem;
+.brand__logo{
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
-.title-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.nav__list{
+  display: flex; gap: 1.5rem;
+  list-style: none;
+  margin: 0; padding: 0;
 }
 
-.navbar-primary {
-    background-color: var(--card-bg); 
-    border-bottom: 1px solid var(--border-color);
+.nav{
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  min-width: 0; 
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav__link{
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.nav__link:hover { color: var(--text); }
+
+.header__actions{
+  margin-left: auto;
+  display: flex; align-items: center; gap: 1rem;
 }
 
-.logo-new .logo-img {
-    height: 30px; 
-    width: auto;
-}
-
-/* Links de Navegação */
-.nav-links-primary {
-    display: flex;
-    gap: 1.5rem;
-    flex-grow: 1;
-    margin-left: 2rem;
-}
-
-.nav-links-primary a {
-    color: #555;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-    white-space: nowrap; 
-}
-
-.nav-links-primary a:hover,
-.nav-links-primary a.active {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-/* Busca e Login */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.search-box {
-    position: relative;
-    display: flex;
-    align-items: center;
-    background-color: var(--header-top-bg);
-    border-radius: 4px;
-    padding: 0.4rem 0.8rem;
-    width: 300px;
-}
-
-.search-icon {
-    color: var(--secondary-color);
-    margin-right: 0.5rem;
-}
-
-.search-input {
-    border: none;
-    background: transparent;
-    width: 100%;
-    padding: 0;
-    font-size: 0.9rem;
-}
-
-.search-input:focus {
-    outline: none;
-}
-
-.btn-login {
-    background-color: #fff;
-    color: #333;
-    padding: 0.6rem 1.2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
-    font-weight: 500;
-}
-
-.btn-login:hover {
-    background-color: var(--background-color);
-    border-color: var(--primary-color);
-}
-
-.btn-login i {
-    margin-right: 0.5rem;
+.search__input{
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 0 .875rem;
+  background: #fff;
+  min-width: 220px;
+  font: inherit;
 }
 
 
 /* --- SEÇÃO INTRODUÇÃO E CONTEÚDO --- */
-.content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+.section{ padding-block: clamp(2.5rem, 6vw, 4.5rem); background: #fff; }
+.section--alt{ background: var(--bg-alt); }
+
+.section-head{
+  text-align:center;
+  margin-bottom: 2rem;
+}
+.section-title{
+  font-size: 2rem;
+  margin: 0 0 .5rem;
+}
+.section-subtitle{
+  margin: 0 auto;
+  color: var(--muted);
+  max-width: 72ch;
 }
 
-.intro-section {
-    text-align: center;
-    margin-bottom: 3rem;
+/* Grid de Cards */
+.card-grid{
+  display:grid;
+  gap: 1.5rem;
+}
+.card-grid--3{
+  grid-template-columns: repeat(1, minmax(0,1fr));
+}
+@media (min-width: 768px){
+  .card-grid--3{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (min-width: 1024px){
+  .card-grid--3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #212529;
-    margin-bottom: 0.5rem;
+/* Cards */
+.inst-card, .event-card, .news-card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+.inst-card{ position: relative; }
+.inst-card__media img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.inst-card__body{
+  padding: 1.5rem;
 }
 
-.page-subtitle {
-    color: var(--secondary-color);
-    max-width: 700px;
-    margin: 0 auto;
+.inst-card__title{
+  margin: 0 0 .75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
-/* --- GRADE DE INSTITUIÇÕES --- */
-.institutions-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
+.meta{
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: .5rem;
+}
+.meta--grid{
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+.meta--spread{
+  display:flex; flex-wrap:wrap; gap:1rem; color: var(--muted);
+}
+.meta__item{
+  display: inline-flex; align-items: center; gap: .5rem;
+  color: var(--muted);
+  font-size: 0.875rem;
 }
 
-.institution-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+.rating{
+  margin-left: .5rem; color: var(--muted);
+}
+.star{ color: var(--orange); margin-left: .125rem; }
+
+.tags{
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  margin-top: .75rem;
+}
+.tag{
+  display: inline-flex; align-items: center; height: 28px;
+  padding: 0 .6rem; border-radius: 999px;
+  background: #eef2f7; color: #1f2937; font-size: 0.875rem;
+  border: 1px solid rgba(31,41,55,.08);
+}
+.tag--muted{ color: var(--muted); }
+
+.alert{
+  margin-top: 1.5rem;
+  background: #e9f1ff;
+  border: 1px solid #d6e4ff;
+  color: #0b3a8a;
+  padding: .75rem .875rem;
+  border-radius: 10px;
+  font-size: 0.875rem;
 }
 
-.institution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+.actions{
+  display: flex; gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.card-image-placeholder {
-    height: 180px; 
-    background-color: #e9ecef;
-    overflow: hidden; 
-    position: relative;
+.chip{
+  position: absolute; top: .75rem; left: .75rem;
+  background: #eef2f7; color:#1f2937;
+  padding: .25rem .6rem; border-radius: 999px;
+  font-size: 12px; border: 1px solid rgba(31,41,55,.08);
 }
+.chip--soft{ background: #f3f4f6; }
 
-.card-image-placeholder img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    display: block; 
-}
-
-.card-content {
-    padding: 1rem;
-}
-
-.course-title {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.institution-name {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* Avaliação */
-.rating {
-    font-size: 0.9rem;
-    margin-bottom: 0.75rem;
-}
-
-.fa-star {
-    color: var(--border-color);
-}
-
-.fa-star.filled {
-    color: var(--star-filled-color);
-}
-
-.rating-value {
-    margin-left: 0.5rem;
-    color: var(--secondary-color);
-}
-
-/* Detalhes (Horas e Alunos) */
-.details-row {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.85rem;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.detail-item i {
-    margin-right: 0.4rem;
-    color: var(--primary-color);
-}
-
-/* Preço e Ação */
-.price-action {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px dashed var(--border-color);
-    padding-top: 1rem;
-}
-
-.price {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #28a745; 
-}
-
-.btn-detalhes {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.btn-detalhes:hover {
-    background-color: #0056b3;
-}
+.section-cta{ display:flex; justify-content:center; margin-top: 2rem; }
 
 
 /* --- FOOTER (EduSync) --- */
+
 .footer-educsync {
+
     background-color: var(--footer-bg);
+
     color: var(--footer-text-color);
-    padding: 3rem 0 0; 
+
+    padding: 3rem 0 0;
+
     font-family: 'Poppins', sans-serif;
+
     margin-top: 3rem;
+
 }
 
+
+
 .footer-container {
+
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 0 20px 3rem;
+
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 2fr; 
+
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+
     gap: 40px;
-    border-bottom: 1px solid var(--footer-border-color); 
+
+    border-bottom: 1px solid var(--footer-border-color);
+
 }
+
+
+
 
 
 .footer-col {
+
     padding: 0 10px;
+
 }
+
+
 
 .footer-logo .logo-placeholder {
+
     font-size: 1.5rem;
+
     font-weight: bold;
+
     color: var(--footer-title-color);
+
     margin-bottom: 0.5rem;
+
 }
+
+
 
 .footer-logo .description {
+
     font-size: 0.9rem;
+
     color: var(--footer-link-color);
+
     line-height: 1.6;
+
 }
+
+
 
 .col-title {
+
     font-size: 1rem;
+
     font-weight: 600;
+
     color: var(--footer-title-color);
+
     margin-bottom: 1rem;
+
     text-transform: uppercase;
+
 }
+
+
 
 .footer-links {
+
     list-style: none;
+
     padding: 0;
+
 }
+
+
 
 .footer-links li {
+
     margin-bottom: 0.5rem;
+
 }
+
+
 
 .footer-links a {
+
     color: var(--footer-link-color);
+
     text-decoration: none;
+
     font-size: 0.9rem;
+
     transition: color 0.2s;
+
 }
+
+
 
 .footer-links a:hover {
+
     color: var(--footer-title-color);
+
 }
+
+
 
 .contact-info {
+
     line-height: 1.8;
+
     font-size: 0.9rem;
+
 }
+
+
 
 .contact-info a {
+
     color: var(--footer-link-color);
+
     text-decoration: none;
+
     transition: color 0.2s;
+
 }
 
+
+
 .contact-info a:hover {
+
     color: var(--footer-title-color);
+
 }
+
+
+
 
 
 /* Direitos Autorais */
+
 .footer-copyright {
+
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 1.5rem 20px;
+
     text-align: center;
+
 }
+
+
 
 .footer-copyright p {
+
     font-size: 0.8rem;
+
     color: var(--footer-link-color);
+
 }
+
+
 
 /* --- RESPONSIVIDADE --- */
-@media (max-width: 1100px) {
-    .search-box {
-        width: 200px;
-    }
-    .nav-links-primary {
-        gap: 1rem;
-        margin-left: 1rem;
-    }
-    .nav-links-primary a {
-        font-size: 0.85rem;
-    }
+
+@media (max-width: 720px){
+
+  .nav{ display: none; }
+
+  .search__input{ min-width: 160px; }
+
+  .meta--grid{ grid-template-columns: 1fr; }
+
+  .actions{ flex-direction: column; }
+
 }
 
 
-@media (max-width: 992px) {
-    .institutions-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-    .nav-links-primary {
-        display: none; 
-    }
-    .search-box {
-        width: 100%; 
-    }
-    .nav-container {
-        gap: 1rem;
-    }
+
+@media (max-width: 820px){
+
+  .footer__grid{ grid-template-columns: 1fr; }
+
+  .footer__barinner{ flex-direction: column; text-align: center; gap: 0.75rem; }
+
 }
 
-@media (max-width: 768px) {
-    .nav-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .nav-actions {
-        width: 100%;
-        margin-top: 1rem;
-        justify-content: center;
-    }
-    .search-box {
-        max-width: 300px;
-        flex-grow: 1;
-    }
-    .btn-login {
-        white-space: nowrap;
-    }
-    .institutions-grid {
-        grid-template-columns: 1fr; 
-    }
-    .page-title {
-        font-size: 2rem;
-    }
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-logo .description {
-        margin-bottom: 1.5rem;
-    }
-    .col-title {
-        text-align: center;
-        margin-top: 1.5rem;
-        margin-bottom: 0.8rem;
-    }
-    .footer-links {
-        text-align: center;
-    }
-    .contact-info {
-        text-align: center;
-    }
+
+
+.newsletter{ color: #eef2ff; padding-block: clamp(2.5rem, 7vw, 4rem); border-top: 1px solid rgba(255,255,255,.08); }
+
+.newsletter__inner{
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  justify-items: center;
+
+  text-align: center;
+
+  gap: 1rem;
+
+}
+
+.newsletter__media{ display: grid; place-items: center; }
+
+.newsletter__media img{
+
+  width: 56px; height: 56px; object-fit: contain;
+
+  transform: translateY(-6px);
+
+  filter: brightness(0) invert(1);
+
+}
+
+.newsletter__title{
+
+  margin: 0; font-size: clamp(1.25rem, 2.4vw, 1.75rem); color: #fff;
+
+}
+
+.newsletter__subtitle{ margin: .25rem 0 1rem; color: #c7ccff; max-width: 70ch; }
+
+
+
+.newsletter__form{
+
+  display: grid;
+
+  grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
+
+  gap: 1rem;
+
+  width: min(100%, 720px);
+
+  margin: 0 auto;
+
+}
+
+.newsletter__form .field input{
+
+  height: 42px;
+
+  width: 100%;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255,255,255,0.28);
+
+  background: rgba(255,255,255,0.06);
+
+  color: #fff;
+
+  padding: 0 .875rem;
+
+}
+
+.newsletter__form .field input::placeholder{ color: #c7ccff; }
+
+
+
+.newsletter__btn{
+
+  white-space: nowrap;
+
+  background: #fff;
+
+  color: #0b0d18;
+
+  margin-top: 1rem;
+
+}
+
+.newsletter__btn:hover{ transform: translateY(-1px); }
+
+
+
+.newsletter__note{
+
+  margin: 0.75rem 0 0; color: #c7ccff; font-size: 0.875rem;
+
+}
+
+
+
+@media (max-width: 640px){
+
+  .newsletter__form{ grid-template-columns: 1fr; width: min(100%, 520px); }
+
+}
+
+
+
+.newsletter, .site-footer{
+
+  background:
+
+   radial-gradient(900px 420px at 70% -160px, rgba(99,102,241,.18), transparent 70%),
+
+   linear-gradient(180deg, #121321, #1b1e2b 60%, #1b1e2b);
+
 }

@@ -59,6 +59,15 @@
     --border-color: #dee2e6;
     --star-filled-color: #ffc107; 
 
+  /* Variáveis utilizadas no layout (alinhadas com Home) */
+  --bg: #f4f6f8;
+  --bg-alt: #f6f7fa;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: rgba(17,24,39,0.08);
+  --orange: #f59e0b;
+
     /* Variáveis do Footer */
     --footer-bg: #111827; 
     --footer-text-color: #e5e7eb; 
@@ -80,7 +89,10 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
-  .newsletter{ color: #eef2ff; padding-block: clamp(2.5rem, 7vw, 4rem); border-top: 1px solid rgba(255,255,255,.08); }
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.newsletter{ color: #eef2ff; padding-block: clamp(2.5rem, 7vw, 4rem); border-top: 1px solid rgba(255,255,255,.08); }
   .newsletter__inner{
     display: grid;
     grid-template-columns: 1fr;
@@ -181,7 +193,7 @@ body {
       text-align: center;
     }
   }
-}
+ 
 
 .inst-card__title{
   margin: 0 0 .75rem;

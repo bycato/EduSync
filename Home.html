@@ -6,8 +6,10 @@
     <title>EduSync — Encontre sua instituição de ensino ideal</title>
     <meta name="description" content="Compare instituições, descubra cursos, acompanhe vestibulares, eventos e notícias educacionais." />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
     <!-- Cabeçalho -->
     <header class="site-header">
       <div class="container header__inner">
@@ -35,7 +37,8 @@
       </div>
     </header>
 
-    <main>
+    
+  <main id="main-content" tabindex="-1">
       <!-- Hero -->
       <section class="hero">
         <div class="container hero__inner">
@@ -556,5 +559,39 @@
         </div>
       </div>
     </footer>
+  <button id="accessibility-icon" aria-label="Abrir menu de acessibilidade">
+    <i class="fa-solid fa-universal-access"></i>
+  </button>
+
+  <!-- Painel de acessibilidade -->
+  <div id="accessibility-panel" aria-label="Opções de acessibilidade">
+    <h2 class="sr-only">Menu de acessibilidade</h2>
+    <button id="contrast-btn">Alternar alto contraste</button>
+    <button id="spacing-btn">Alternar espaçamento de texto</button>
+    <button id="reading-btn">Ativar/Desativar modo leitura</button>
+  </div>
+
+  <script>
+    const icon = document.getElementById('accessibility-icon');
+    const panel = document.getElementById('accessibility-panel');
+
+    icon.addEventListener('click', () => {
+      panel.classList.toggle('active');
+    });
+
+    // Funções dos botões
+    document.getElementById('contrast-btn').addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    document.getElementById('spacing-btn').addEventListener('click', () => {
+      document.body.classList.toggle('wide-spacing');
+    });
+
+    document.getElementById('reading-btn').addEventListener('click', () => {
+      document.body.classList.toggle('reading-mode');
+    });
+  </script>
+
   </body>
 </html>

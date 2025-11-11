@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Base de estilos compartilhada (tipografia, botões, grid, cards, header/nav, etc.) -->
-  <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/instituicoes.css">
     </head>
 <body>
@@ -204,9 +205,6 @@
               </article>
             </div>
 
-            <div class="section-cta">
-              <a class="button button--ghostarrow" href="#">Ver todas as instituições</a>
-            </div>
         </div> </section>
 
     <footer class="site-footer">
@@ -246,6 +244,39 @@
         </div>
       </div>
     </footer>
+    <button id="accessibility-icon" aria-label="Abrir menu de acessibilidade">
+    <i class="fa-solid fa-universal-access"></i>
+  </button>
+
+  <!-- Painel de acessibilidade -->
+  <div id="accessibility-panel" aria-label="Opções de acessibilidade">
+    <h2 class="sr-only">Menu de acessibilidade</h2>
+    <button id="contrast-btn">Alternar alto contraste</button>
+    <button id="spacing-btn">Alternar espaçamento de texto</button>
+    <button id="reading-btn">Ativar/Desativar modo leitura</button>
+  </div>
+
+  <script>
+    const icon = document.getElementById('accessibility-icon');
+    const panel = document.getElementById('accessibility-panel');
+
+    icon.addEventListener('click', () => {
+      panel.classList.toggle('active');
+    });
+
+    // Funções dos botões
+    document.getElementById('contrast-btn').addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    document.getElementById('spacing-btn').addEventListener('click', () => {
+      document.body.classList.toggle('wide-spacing');
+    });
+
+    document.getElementById('reading-btn').addEventListener('click', () => {
+      document.body.classList.toggle('reading-mode');
+    });
+  </script>
     <script src="js/auth-ui.js" defer></script>
     </body>
 </html>

@@ -613,3 +613,110 @@ body {
 @media (max-width: 560px){
   .role-grid{ grid-template-columns: 1fr; }
 }
+.skip-link {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 1001;
+    }
+    .skip-link:focus {
+      top: 10px;
+    }
+
+    :focus {
+      outline: 3px solid #005fcc;
+      outline-offset: 2px;
+    }
+
+    #accessibility-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #005fcc;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+    #accessibility-icon:focus {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    #accessibility-panel {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: #f1f1f1;
+      color: #000;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      width: 250px;
+      padding: 16px;
+      display: none;
+      z-index: 1001;
+    }
+
+    #accessibility-panel.active {
+      display: block;
+    }
+
+    #accessibility-panel button {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      background: #005fcc;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    #accessibility-panel button:hover,
+    #accessibility-panel button:focus {
+      background: #003f9e;
+    }
+
+    body.high-contrast {
+      background-color: #000;
+      color: #fff;
+    }
+
+    body.high-contrast a {
+      color: #00ffff;
+    }
+
+    body.wide-spacing {
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+
+    body.reading-mode * {
+      transition: none !important;
+      box-shadow: none !important;
+      background-image: none !important;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }

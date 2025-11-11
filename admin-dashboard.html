@@ -45,40 +45,126 @@
         </header>
 
         <nav class="panel-tabs" aria-label="Seções do painel">
-          <a class="panel-tab" href="#">
+          <a class="panel-tab panel-tab--active" href="#overview" data-panel="overview">
             <span class="panel-tab__icon" aria-hidden="true">
-              <img src="img/icons/overview.svg" alt="" />
+              <img src="./img/icons/overview.svg" alt="" />
             </span>
             <span>Visão Geral</span>
           </a>
-          <a class="panel-tab panel-tab--active" href="#">
+          <a class="panel-tab" href="#posts" data-panel="posts">
             <span class="panel-tab__icon" aria-hidden="true">
-              <img src="img/icons/posts.svg" alt="" />
+              <img src="./img/icons/posts.svg" alt="" />
             </span>
             <span>Posts</span>
           </a>
-          <a class="panel-tab" href="#">
+          <a class="panel-tab" href="#usuarios" data-panel="usuarios">
             <span class="panel-tab__icon" aria-hidden="true">
-              <img src="img/icons/users.svg" alt="" />
+              <img src="./img/icons/users.svg" alt="" />
             </span>
             <span>Usuários</span>
           </a>
-          <a class="panel-tab" href="#">
+          <a class="panel-tab" href="#eventos" data-panel="eventos">
             <span class="panel-tab__icon" aria-hidden="true">
-              <img src="img/icons/events.svg" alt="" />
+              <img src="./img/icons/events.svg" alt="" />
             </span>
             <span>Eventos</span>
           </a>
-          <a class="panel-tab" href="#">
+          <a class="panel-tab" href="#personalizacao" data-panel="personalizacao">
             <span class="panel-tab__icon" aria-hidden="true">
-              <img src="img/icons/personalization.svg" alt="" />
+              <img src="./img/icons/personalization.svg" alt="" />
             </span>
             <span>Personalização</span>
           </a>
         </nav>
-        </nav>
 
-        <section class="panel-card" aria-labelledby="posts-title">
+        <section id="overview" class="panel-section panel-section--active" aria-labelledby="overview-title">
+          <h2 id="overview-title" class="sr-only">Visão Geral</h2>
+          <div class="overview-grid">
+            <article class="summary-card">
+              <header class="summary-card__head">
+                <span class="summary-card__label">Total de Posts</span>
+                <span class="summary-card__icon" aria-hidden="true">
+                  <img src="./img/icons/posts.svg" alt="" />
+                </span>
+              </header>
+              <div class="summary-card__value">3</div>
+              <p class="summary-card__meta">1 pendentes</p>
+            </article>
+
+            <article class="summary-card">
+              <header class="summary-card__head">
+                <span class="summary-card__label">Usuários Ativos</span>
+                <span class="summary-card__icon" aria-hidden="true">
+                  <img src="./img/icons/users.svg" alt="" />
+                </span>
+              </header>
+              <div class="summary-card__value">3</div>
+              <p class="summary-card__meta">1 administradores</p>
+            </article>
+
+            <article class="summary-card">
+              <header class="summary-card__head">
+                <span class="summary-card__label">Eventos Ativos</span>
+                <span class="summary-card__icon" aria-hidden="true">
+                  <img src="./img/icons/events.svg" alt="" />
+                </span>
+              </header>
+              <div class="summary-card__value">2</div>
+              <p class="summary-card__meta">165 participantes</p>
+            </article>
+
+            <article class="summary-card">
+              <header class="summary-card__head">
+                <span class="summary-card__label">Taxa de Aprovação</span>
+                <span class="summary-card__icon" aria-hidden="true">
+                  <img src="./img/icons/overview.svg" alt="" />
+                </span>
+              </header>
+              <div class="summary-card__value">87%</div>
+              <p class="summary-card__meta">Últimos 30 dias</p>
+            </article>
+          </div>
+
+          <section class="activity-card panel-card" aria-labelledby="activity-title">
+            <div class="activity-card__head">
+              <div>
+                <h3 id="activity-title" class="activity-card__title">Atividade Recente</h3>
+                <p class="activity-card__subtitle">Ações mais recentes no sistema</p>
+              </div>
+            </div>
+            <ul class="activity-list" aria-label="Eventos recentes">
+              <li class="activity-item">
+                <span class="activity-item__icon activity-item__icon--posts" aria-hidden="true">
+                  <img src="./img/icons/activity-approval.svg" alt="" />
+                </span>
+                <div class="activity-item__content">
+                  <p class="activity-item__title">Post "Resumo completo de Matemática" foi aprovado</p>
+                  <span class="activity-item__meta">Há 2 horas</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <span class="activity-item__icon activity-item__icon--users" aria-hidden="true">
+                  <img src="./img/icons/activity-user.svg" alt="" />
+                </span>
+                <div class="activity-item__content">
+                  <p class="activity-item__title">Novo usuário cadastrado: Ana Costa</p>
+                  <span class="activity-item__meta">Há 5 horas</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <span class="activity-item__icon activity-item__icon--events" aria-hidden="true">
+                  <img src="./img/icons/activity-event.svg" alt="" />
+                </span>
+                <div class="activity-item__content">
+                  <p class="activity-item__title">Evento "Aulão de Química" iniciado</p>
+                  <span class="activity-item__meta">Há 1 dia</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="posts" class="panel-section panel-card" aria-labelledby="posts-title">
           <header class="panel-card__head">
             <div>
               <h2 id="posts-title" class="panel-card__title">Gerenciamento de Posts</h2>
@@ -135,5 +221,6 @@
         </section>
       </div>
     </main>
+    <script src="js/admin-dashboard.js" defer></script>
   </body>
 </html>

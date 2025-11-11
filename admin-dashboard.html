@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Painel Administrativo — EduSync</title>
+    <meta name="description" content="Gerencie conteúdos, usuários e eventos do EduSync." />
+    <link rel="stylesheet" href="css/admin-dashboard.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+    <a class="skip-link" href="#navegacao-principal">Pular para a navegação</a>
+
+    <header class="admin-header">
+      <div class="container header__inner">
+        <a class="brand" href="Home.html" aria-label="EduSync — Início">
+          <img class="brand__logo" src="./img/logon.png" alt="EduSync" />
+        </a>
+
+        <nav id="navegacao-principal" class="nav" aria-label="Principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="instituicoes.html">Instituições</a></li>
+            <li><a class="nav__link" href="#">Cursos</a></li>
+            <li><a class="nav__link" href="#">Vestibulares</a></li>
+            <li><a class="nav__link" href="#">Feed</a></li>
+            <li><a class="nav__link" href="#">Eventos</a></li>
+            <li><a class="nav__link" href="#">Notícias</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <form class="search" role="search" aria-label="Buscar no EduSync">
+            <input class="search__input" type="search" placeholder="Buscar instituições, cursos..." />
+          </form>
+          <button class="avatar" type="button" aria-label="Abrir menu do administrador"></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo-principal" class="admin-main">
+      <div class="container">
+        <header class="page-head">
+          <h1 class="page-title">Painel Administrativo</h1>
+          <p class="page-subtitle">Gerencie conteúdo, usuários e eventos do EduSync</p>
+        </header>
+
+        <nav class="panel-tabs" aria-label="Seções do painel">
+          <a class="panel-tab" href="#">
+            <span class="panel-tab__icon" aria-hidden="true">
+              <img src="img/icons/overview.svg" alt="" />
+            </span>
+            <span>Visão Geral</span>
+          </a>
+          <a class="panel-tab panel-tab--active" href="#">
+            <span class="panel-tab__icon" aria-hidden="true">
+              <img src="img/icons/posts.svg" alt="" />
+            </span>
+            <span>Posts</span>
+          </a>
+          <a class="panel-tab" href="#">
+            <span class="panel-tab__icon" aria-hidden="true">
+              <img src="img/icons/users.svg" alt="" />
+            </span>
+            <span>Usuários</span>
+          </a>
+          <a class="panel-tab" href="#">
+            <span class="panel-tab__icon" aria-hidden="true">
+              <img src="img/icons/events.svg" alt="" />
+            </span>
+            <span>Eventos</span>
+          </a>
+          <a class="panel-tab" href="#">
+            <span class="panel-tab__icon" aria-hidden="true">
+              <img src="img/icons/personalization.svg" alt="" />
+            </span>
+            <span>Personalização</span>
+          </a>
+        </nav>
+        </nav>
+
+        <section class="panel-card" aria-labelledby="posts-title">
+          <header class="panel-card__head">
+            <div>
+              <h2 id="posts-title" class="panel-card__title">Gerenciamento de Posts</h2>
+              <p class="panel-card__subtitle">Modere e gerencie o conteúdo publicado pelos usuários</p>
+            </div>
+          </header>
+
+          <div class="panel-table" role="region" aria-label="Lista de posts">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Autor</th>
+                  <th scope="col">Conteúdo</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="col-actions">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maria Silva</td>
+                  <td>Resumo completo de Matemática - ENEM 2024</td>
+                  <td>Resumo</td>
+                  <td>30/10/2024</td>
+                  <td><span class="status status--pending">Pendente</span></td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para Maria Silva">⋮</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>João Santos</td>
+                  <td>⭐ Avaliação da UFRJ - Campus Fundão</td>
+                  <td>Avaliação</td>
+                  <td>29/10/2024</td>
+                  <td><span class="status status--approved">Aprovado</span></td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para João Santos">⋮</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ana Costa</td>
+                  <td>Aulão de Física - Cinemática</td>
+                  <td>Evento</td>
+                  <td>28/10/2024</td>
+                  <td><span class="status status--approved">Aprovado</span></td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para Ana Costa">⋮</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

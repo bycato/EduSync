@@ -219,6 +219,165 @@
             </table>
           </div>
         </section>
+
+        <section id="usuarios" class="panel-section panel-card" aria-labelledby="usuarios-title">
+          <header class="panel-card__head">
+            <div>
+              <h2 id="usuarios-title" class="panel-card__title">Gerenciamento de Usuários</h2>
+              <p class="panel-card__subtitle">Gerencie permissões e status dos usuários</p>
+            </div>
+          </header>
+
+          <div class="panel-table" role="region" aria-label="Lista de usuários">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Função</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Data de Cadastro</th>
+                  <th scope="col" class="col-actions">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maria Silva</td>
+                  <td>maria@email.com</td>
+                  <td><span class="role-chip role-chip--student">Estudante</span></td>
+                  <td><span class="status status--active">Ativo</span></td>
+                  <td>14/01/2024</td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para Maria Silva">⋮</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>João Santos</td>
+                  <td>joao@email.com</td>
+                  <td><span class="role-chip role-chip--student">Estudante</span></td>
+                  <td><span class="status status--active">Ativo</span></td>
+                  <td>19/02/2024</td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para João Santos">⋮</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Admin User</td>
+                  <td>admin@edusync.com</td>
+                  <td><span class="role-chip role-chip--admin">Administrador</span></td>
+                  <td><span class="status status--active">Ativo</span></td>
+                  <td>30/11/2023</td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para Admin User">⋮</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="eventos" class="panel-section panel-card" aria-labelledby="eventos-title">
+          <header class="panel-card__head">
+            <div>
+              <h2 id="eventos-title" class="panel-card__title">Gerenciamento de Eventos</h2>
+              <p class="panel-card__subtitle">Monitore e gerencie eventos criados pela comunidade</p>
+            </div>
+          </header>
+
+          <div class="panel-table" role="region" aria-label="Lista de eventos">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Título</th>
+                  <th scope="col">Organizador</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Participantes</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" class="col-actions">Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aulão de Química Orgânica</td>
+                  <td>Prof. Carlos</td>
+                  <td>04/11/2024</td>
+                  <td>45</td>
+                  <td><span class="status status--scheduled">Agendado</span></td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para Aulão de Química Orgânica">⋮</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Revisão ENEM - Redação</td>
+                  <td>Profª. Ana</td>
+                  <td>31/10/2024</td>
+                  <td>120</td>
+                  <td><span class="status status--inprogress">Em andamento</span></td>
+                  <td class="col-actions">
+                    <button class="icon-button" type="button" aria-label="Abrir ações para Revisão ENEM - Redação">⋮</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="personalizacao" class="panel-section panel-card" aria-labelledby="personalizacao-title">
+          <header class="panel-card__head">
+            <div>
+              <h2 id="personalizacao-title" class="panel-card__title">Personalização do Site</h2>
+              <p class="panel-card__subtitle">Configure a aparência e o comportamento do EduSync</p>
+            </div>
+            <div class="panel-card__actions">
+              <button class="panel-card__action" type="button">Restaurar padrão</button>
+              <button class="panel-card__action panel-card__action--primary" type="button">Salvar alterações</button>
+            </div>
+          </header>
+
+          <div class="customization-tabs" role="tablist" aria-label="Seções de personalização">
+            <button class="customization-tab customization-tab--active" type="button">Cores</button>
+            <button class="customization-tab" type="button">Tipografia</button>
+            <button class="customization-tab" type="button">Imagens</button>
+            <button class="customization-tab" type="button">Acessibilidade</button>
+            <button class="customization-tab" type="button">Configurações</button>
+          </div>
+
+          <div class="customization-grid">
+            <section class="customization-card" aria-labelledby="customization-colors">
+              <h3 id="customization-colors" class="customization-card__title">Esquema de Cores</h3>
+              <p class="customization-card__subtitle">Personalize as cores principais do site</p>
+
+              <form class="customization-form">
+                <div class="form-field">
+                  <label class="form-label" for="primary-color">Cor Primária</label>
+                  <input class="form-input" id="primary-color" type="text" placeholder="#3B82F6" aria-describedby="primary-color-helper">
+                  <span id="primary-color-helper" class="form-help">Usada em botões, links e destaques</span>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="secondary-color">Cor Secundária</label>
+                  <input class="form-input" id="secondary-color" type="text" placeholder="#10B981" aria-describedby="secondary-color-helper">
+                  <span id="secondary-color-helper" class="form-help">Usada em elementos de sucesso e confirmação</span>
+                </div>
+              </form>
+
+              <div class="preview-grid" aria-label="Pré-visualização de cores">
+                <article class="preview-card preview-card--primary">
+                  <h4>Cor Primária</h4>
+                  <p>Exemplo de texto com a cor primária</p>
+                </article>
+                <article class="preview-card preview-card--secondary">
+                  <h4>Cor Secundária</h4>
+                  <p>Exemplo de texto com a cor secundária</p>
+                </article>
+                <article class="preview-card preview-card--accent">
+                  <h4>Bordas e ícones</h4>
+                  <p>Elementos com destaque colorido</p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
       </div>
     </main>
     <script src="js/admin-dashboard.js" defer></script>

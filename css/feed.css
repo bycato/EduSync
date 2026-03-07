@@ -1,0 +1,260 @@
+:root{
+  --text:#111;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial;
+background:#f5f7fb;
+margin:0;
+}
+
+/* HEADER */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #FFFFFFF2;
+  border-bottom: 1px solid var(--line);
+  min-height: 65px;
+  padding-left: 117px;
+  padding-right: 117px;
+}
+
+/* CONTAINER HEADER */
+
+.site-header .container{
+  width: 100%;
+  margin-inline: 0;
+}
+
+/* ORGANIZAÇÃO DO HEADER */
+
+.header__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding-top:8px;
+  padding-bottom:8px;
+}
+
+/* RESPONSIVO HEADER */
+
+@media (max-width:1024px){
+.site-header{
+padding-left:24px;
+padding-right:24px;
+}
+}
+
+/* LOGO */
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  color:var(--text);
+  text-decoration:none;
+  margin-right:30px;
+}
+
+.brand__logo{
+  height:28px;
+  width:auto;
+  display:block;
+}
+
+/* NAV */
+
+.nav{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  min-width:0;
+}
+
+.nav__list{
+  display:flex;
+  gap:30px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.nav__link{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+}
+
+.nav__link:hover{
+  color:var(--text);
+}
+
+/* AÇÕES HEADER */
+
+.header__actions{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+/* BUSCA */
+
+.search__input{
+  height:36px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  padding:0 .875rem;
+  background:#fff;
+  min-width:220px;
+  font:inherit;
+}
+
+/* CONTAINER DO FEED */
+
+.container{
+max-width:700px;
+margin:auto;
+padding:30px;
+}
+
+/* TITULO */
+
+h1{
+text-align:center;
+}
+
+.descricao{
+text-align:center;
+color:gray;
+}
+
+/* ALERTA */
+
+.alerta{
+background:#e9f2ff;
+padding:15px;
+border-radius:10px;
+margin:20px 0;
+}
+
+/* POST BOX */
+
+.post-box{
+display:flex;
+gap:10px;
+background:white;
+padding:10px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.post-box input{
+flex:1;
+border:none;
+outline:none;
+}
+
+/* AVATAR */
+
+.avatar{
+width:40px;
+height:40px;
+background:#ccc;
+border-radius:50%;
+}
+
+/* FILTROS */
+
+.filtros{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.filtros button{
+padding:8px 15px;
+border:none;
+border-radius:20px;
+background:#eee;
+cursor:pointer;
+}
+
+.filtros .ativo{
+background:black;
+color:white;
+}
+
+/* POST */
+
+.post{
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.post-header{
+display:flex;
+gap:10px;
+margin-bottom:10px;
+}
+
+/* TAG */
+
+.tag{
+background:pink;
+padding:3px 8px;
+border-radius:8px;
+font-size:12px;
+margin-left:5px;
+}
+
+/* TEXTO */
+
+.texto{
+margin:10px 0;
+}
+
+/* EVENTO */
+
+.evento{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#f0eef6;
+padding:15px;
+border-radius:10px;
+}
+
+/* BOTÃO */
+
+.login-btn{
+background:black;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* AÇÕES */
+
+.acoes{
+margin-top:10px;
+display:flex;
+gap:20px;
+color:gray;
+font-size:14px;
+}

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>EduSync — Feed da Comunidade</title>
+
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/feed.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+<!-- CABEÇALHO (IGUAL AO DA HOME) -->
+<header class="site-header">
+
+<div class="container header__inner">
+
+<a href="index.html" class="brand" aria-label="EduSync — Início">
+<img class="brand__logo" src="./img/logon.png" alt="EduSync">
+</a>
+
+<nav class="nav" aria-label="Principal">
+<ul class="nav__list">
+
+<li>
+<a class="nav__link" href="instituicoes.html">Instituições</a>
+</li>
+
+<li>
+<a class="nav__link" href="#">Cursos</a>
+</li>
+
+<li>
+<a class="nav__link" href="#">Vestibulares</a>
+</li>
+
+<li>
+<a class="nav__link" href="#">Eventos</a>
+</li>
+
+<li>
+<a class="nav__link" href="#">Notícias</a>
+</li>
+
+<li>
+<a class="nav__link" href="feed.html">Feed</a>
+</li>
+
+</ul>
+</nav>
+
+<div class="header__actions">
+
+<form class="search" role="search" aria-label="Buscar">
+<input class="search__input" type="search" placeholder="Buscar">
+</form>
+
+<a id="open-login-choice"
+class="button button--ghost js-login-trigger"
+href="login.html">
+Login
+</a>
+
+<button class="button button--dark js-admin-trigger"
+type="button"
+aria-controls="admin-login">
+Acesso Admin
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- FEED -->
+
+<main id="main-content" class="container">
+
+<h1>Feed da Comunidade</h1>
+
+<p class="descricao">
+Compartilhe conhecimento, experiências e conecte-se com outros estudantes.
+</p>
+
+
+<div class="alerta">
+<strong>Bem-vindo ao Feed!</strong><br>
+Faça login para curtir, comentar e compartilhar posts.
+</div>
+
+
+<div class="post-box">
+
+<div class="avatar"></div>
+
+<input type="text"
+placeholder="Faça login para criar posts...">
+
+</div>
+
+
+<div class="filtros">
+
+<button class="ativo">Todos</button>
+
+<button>Resumos</button>
+
+<button>Avaliações</button>
+
+<button>Fotos</button>
+
+<button>Cursos</button>
+
+<button>Eventos</button>
+
+</div>
+
+
+<div class="post">
+
+<div class="post-header">
+
+<div class="avatar"></div>
+
+<div>
+<strong>Maria Silva</strong>
+<span class="tag">Evento de Aula</span>
+<br>
+<small>Medicina • 16h</small>
+</div>
+
+</div>
+
+
+<p>
+Revisão completa de funções, geometria espacial e mecânica.
+</p>
+
+
+<div class="evento">
+
+<div>
+<strong>Aulão ENEM 2024 - Matemática e Física</strong>
+<p>25 de Março</p>
+</div>
+
+<button class="login-btn">
+Login
+</button>
+
+</div>
+
+
+<div class="acoes">
+
+<span>❤️ 89</span>
+
+<span>💬 24</span>
+
+<span>🔗 Compartilhar</span>
+
+</div>
+
+</div>
+
+</main>
+
+
+<script src="js/auth-ui.js" defer></script>
+
+</body>
+</html>
+```
